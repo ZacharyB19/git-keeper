@@ -143,10 +143,7 @@ def students_from_csv(reader: CSVReader) -> list:
 
     for row in reader.get_rows():
         if len(row) > 0:
-            if Student.from_csv_row(row) in students:
-                raise StudentError(Student.email_address + ' appears more than once.')
-            else:
-                students.append(Student.from_csv_row(row))
+            students.append(Student.from_csv_row(row))
 
     return students
 
