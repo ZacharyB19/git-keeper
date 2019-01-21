@@ -48,6 +48,11 @@ Malformed CSV
     Add File To Client    washington    files/malformed_cs1.csv    cs1.csv
     Gkeep Modify Fails    faculty=washington    class_name=cs1
 
+Missing CSV
+    [Tags]    error
+    Establish Course  washington
+    Gkeep Modify Fails    faculty=washington    class_name=cs1
+
 *** Keywords ***
 
 Establish Course
